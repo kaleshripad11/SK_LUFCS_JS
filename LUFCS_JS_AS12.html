@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>ASSIGNMENT 1 | QESTION 2</title>
+		<script>
+			function printPage(){
+				window.print();
+			}
+		</script>
+	</head>
+	<body style="background:#FFFCCC;" onLoad="printPage();">
+		<script>
+			//First declare a variable storing the object of Date class
+			var day = new Date();
+			
+			//Get day count of the day. The getDay() will return the number between 0 to 6
+			//0 indicates the day 'Sunday' and 1 indicates 'Monday' and so on
+			//The 'today' variable will store any number between 0 to 6
+			var today = day.getDay();
+			
+			//A array is required to get the day by traversing through it
+			var days=["Sunday", "Monday", "Tuesday", "Wednsday", "Thursday", "Friday", "Saturday"];
+			
+			//In the below statement the variable 'today' will be acting as index variable for array 'days'
+			//using which it can be traversed through the all values and matching index value will be printed
+			document.write("Today is : "+days[today]+"<br/>");
+			
+			//Get the Hours and convert it to 12 hr format
+			var hrs = day.getHours();
+			var mins = day.getMinutes();  //Get minutes
+			var sec = day.getSeconds();	  //Get Seconds
+			hrs = hrs%12;
+			if(hrs<11) hrs = "0"+hrs;
+			if(mins<11) mins= "0"+mins;
+			if(sec<11) sec = "0"+sec;
+			
+			if(hrs>=12){
+				time = "AM"
+			}
+			else{
+				time = "PM"
+			}
+			
+			document.write("Current Time : "+hrs+":"+mins+":"+sec+" "+time);
+		</script>
+	</body>
+</html>
