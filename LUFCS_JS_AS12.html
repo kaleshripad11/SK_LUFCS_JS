@@ -25,11 +25,14 @@
 			document.write("Today is : "+days[today]+"<br/>");
 			
 			//Get the Hours and convert it to 12 hr format
-			var hrs = day.getHours();
-			hrs = hrs%12;
-			
-			var mins = day.getMinutes();  //Get minutes
+			var hrs = day.getHours();	  //Get Hours
+			var mins = day.getMinutes();  	  //Get minutes
 			var sec = day.getSeconds();	  //Get Seconds
+			
+			hrs = hrs%12;
+			if(hrs<11) hrs = "0"+hrs;
+			if(mins<11) mins= "0"+mins;
+			if(sec<11) sec = "0"+sec;
 			
 			if(hrs>=12){
 				time = "AM"
