@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>GET OS DETAILS</title>
+	</head>
+	<body>
+		<input type="text" placeholder="Enter OS details" id="osid" name="osname"/>
+		<br/><br/>
+		<button onclick="showDetails();">Get OS</button>
+		<br/><br/>
+		<p>The os name is <b><i id="b1"></i></b> and version is <b><i id="b2"></i></b>
+		<script type="text/javascript">
+			function showDetails(){
+				var osdetails = document.getElementById("osid").value;
+				var str1 = osdetails.split(" ");
+				document.getElementById("b1").innerHTML=str1[0];
+				document.getElementById("b2").innerHTML=str1[1];
+			}
+		</script>
+	</body>
+</html>
